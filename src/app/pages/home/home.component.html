@@ -1,0 +1,305 @@
+
+		<!-- Slider
+================================================== -->
+
+		<div id="homeSlider" class="royalSlider rsDefaultInv">
+
+			<!-- Slide #1 -->
+			<div class="rsContent">
+				<a class="rsImg" href="assets/images/sliderA_01.jpg"></a>
+				<i class="rsTmb">Mexican Grilled <br> Corn Recipe</i>
+
+				<!-- Slide Caption -->
+				<div class="SlideTitleContainer rsABlock">
+					<div class="CaptionAlignment">
+						<div class="rsSlideTitle tags">
+							<ul>
+								<li>Baking</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+
+						<h2 class="rsSlideTitle title"><a href="recipe-page-1.html">Mexican Grilled Corn Recipe</a></h2>
+
+						<div class="rsSlideTitle details">
+							<ul>
+								<li><i class="fa fa-cutlery"></i> 4 Servings</li>
+								<li><i class="fa fa-clock-o"></i> 30 Min</li>
+								<li><i class="fa fa-user"></i> by <a href="#">Sandra Fortin</a></li>
+							</ul>
+						</div>
+
+						<a href="recipe-page-1.html" class="rsSlideTitle button">View Recipe</a>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+        <div class="rsContent">
+
+    <owl-carousel-o [options]="customOptions">
+
+        <ng-container *ngFor="let slide of Recipes">
+          <ng-template carouselSlide [id]="slide.id">
+
+          </ng-template>
+        </ng-container>
+    
+      </owl-carousel-o>
+
+        </div>
+
+
+<!-- Content
+================================================== -->
+<div class="container">
+
+    <!-- Masonry -->
+    <div class="twelve columns">
+
+        <!-- Headline -->
+        <h3 class="headline">Latest Recipes</h3>
+        <span class="line rb margin-bottom-35"></span>
+        <div class="clearfix"></div>
+
+        <!-- Isotope -->
+        <div *ngFor="let item of Recipes" class="isotope">
+
+            <!-- Recipe #1 -->
+            <div class="four recipe-box columns">
+
+                <!-- Thumbnail -->
+                <div class="thumbnail-holder">
+                    <a href="recipe-page-1.html">
+                        <img src={{item.image}} alt="" />
+                        <div class="hover-cover"></div>
+                        <div class="hover-icon">View Recipe</div>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="recipe-box-content">
+                    <h3 class="header-text"><a href="recipe-page-1.html" >{{item.name}}  <br> {{item.cuisine}}</a></h3>
+
+                    <div class="rating five-stars">
+                        <div class="star-rating"></div>
+                        <div class="star-bg"></div>
+                    </div>
+
+                    <div class="recipe-meta"><i class="fa fa-clock-o"></i>{{item.prepTimeMinutes}}</div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+
+        <!-- Pagination -->
+        <div class="pagination-container masonry">
+            <nav class="pagination">
+                <ul>
+                    <li><a href="#" class="current-page">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </nav>
+
+            <nav class="pagination-next-prev">
+                <ul>
+                    <li><a href="#" class="prev"></a></li>
+                    <li><a href="#" class="next"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+
+    <!-- Sidebar
+================================================== -->
+    <div class="four columns">
+
+        <!-- Search Form -->
+        <div class="widget search-form">
+            <nav class="search">
+                <form action="#" method="get">
+                    <button><i class="fa fa-search"></i></button>
+                    <input class="search-field" type="text" placeholder="Search for recipes" value="" />
+                </form>
+            </nav>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <!-- Author Box -->
+        <div class="widget">
+            <div class="author-box">
+                <span class="title">Author</span>
+                <span class="name">Sandra <br> Fortin</span>
+                <span class="contact"><a href="mailto:sandra@chow.com">{{email}}</a></span>
+                <img src="assets/images/author-photo.png" alt="">
+                <p>I'm Sandra and this is where I share my stuff. I am madly in love with food. You will find a
+                    balance of healthy recipes, comfort food and indulgent desserts.</p>
+            </div>
+        </div>
+
+
+        <!-- Popular Recipes -->
+        <div class="widget">
+            <h4 class="headline">Popular Recipes</h4>
+            <span class="line margin-bottom-30"></span>
+            <div class="clearfix"></div>
+
+            <!-- Recipe #1 -->
+            <a href="recipe-page-1.html" class="featured-recipe">
+                <img src="assets/images/featuredRecipe-01.jpg" alt="">
+
+                <div class="featured-recipe-content">
+                    <h4>Choclate Cake With Green Tea Cream</h4>
+
+                    <div class="rating five-stars">
+                        <div class="star-rating"></div>
+                        <div class="star-bg"></div>
+                    </div>
+                </div>
+                <div class="post-icon"></div>
+            </a>
+
+            <!-- Recipe #2 -->
+            <a href="recipe-page-1.html" class="featured-recipe">
+                <img src="assets/images/featuredRecipe-02.jpg" alt="">
+
+                <div class="featured-recipe-content">
+                    <h4>Mexican Grilled Corn Recipe</h4>
+
+                    <div class="rating five-stars">
+                        <div class="star-rating"></div>
+                        <div class="star-bg"></div>
+                    </div>
+                </div>
+                <div class="post-icon"></div>
+            </a>
+
+            <!-- Recipe #3 -->
+            <a href="recipe-page-1.html" class="featured-recipe">
+                <img src="assets/images/featuredRecipe-03.jpg" alt="">
+
+                <div class="featured-recipe-content">
+                    <h4>Pollo Borracho With Homemade Tortillas</h4>
+
+                    <div class="rating five-stars">
+                        <div class="star-rating"></div>
+                        <div class="star-bg"></div>
+                    </div>
+                </div>
+                <div class="post-icon"></div>
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+
+
+        <!-- Share -->
+        <div class="widget">
+            <h4 class="headline">Share</h4>
+            <span class="line margin-bottom-30"></span>
+            <div class="clearfix"></div>
+
+            <ul class="share-buttons">
+                <li class="facebook-share">
+                    <a href="#">
+                        <span class="counter">1,234</span>
+                        <span class="counted">Fans</span>
+                        <span class="action-button">Like</span>
+                    </a>
+                </li>
+
+                <li class="twitter-share">
+                    <a href="#">
+                        <span class="counter">863</span>
+                        <span class="counted">Followers</span>
+                        <span class="action-button">Follow</span>
+                    </a>
+                </li>
+
+                <li class="google-plus-share">
+                    <a href="#">
+                        <span class="counter">902</span>
+                        <span class="counted">Followers</span>
+                        <span class="action-button">Follow</span>
+                    </a>
+                </li>
+
+                <!-- 			<li class="behance-share">
+        <a href="#">
+            <span class="counter">902</span>
+            <span class="counted">Followers</span>
+            <span class="action-button">Follow</span>
+        </a>
+    </li>
+
+    <li class="instagram-share">
+        <a href="#">
+            <span class="counter">902</span>
+            <span class="counted">Followers</span>
+            <span class="action-button">Follow</span>
+        </a>
+    </li>
+
+    <li class="dribbble-share">
+        <a href="#">
+            <span class="counter">902</span>
+            <span class="counted">Followers</span>
+            <span class="action-button">Follow</span>
+        </a>
+    </li>
+
+    <li class="linkedin-share">
+        <a href="#">
+            <span class="counter">902</span>
+            <span class="counted">Followers</span>
+            <span class="action-button">Follow</span>
+        </a>
+    </li>
+
+
+    <li class="github-share">
+        <a href="#">
+            <span class="counter">902</span>
+            <span class="counted">Followers</span>
+            <span class="action-button">Follow</span>
+        </a>
+    </li>
+
+
+    <li class="youtube-share">
+        <a href="#">
+            <span class="counter">902</span>
+            <span class="counted">Followers</span>
+            <span class="action-button">Follow</span>
+        </a>
+    </li>
+
+    <li class="pinterest-share">
+        <a href="#">
+            <span class="counter">902</span>
+            <span class="counted">Followers</span>
+            <span class="action-button">Follow</span>
+        </a>
+    </li>
+-->
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- Container / End -->
+
+<div class="margin-top-5"></div>
