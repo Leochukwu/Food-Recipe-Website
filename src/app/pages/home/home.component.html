@@ -2,7 +2,8 @@
 		<!-- Slider
 ================================================== -->
 
-		<div id="homeSlider" class="royalSlider rsDefaultInv">
+		<div id="homeSlider" class="royalSlider rsDefaultInv"  >
+
 
 			<!-- Slide #1 -->
 			<div class="rsContent">
@@ -35,22 +36,148 @@
 
 			</div>
 
+			<!-- Slide #2 -->
+			<div class="rsContent">
+				<a class="rsImg" href="assets/images/sliderA_02.jpg"></a>
+				<i class="rsTmb">Roast Chicken <br>With Lemon Gravy</i>
+
+				<!-- Slide Caption -->
+				<div class="SlideTitleContainer rsABlock">
+					<div class="CaptionAlignment">
+						<div class="rsSlideTitle tags">
+							<ul>
+								<li>Curry</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+
+						<h2 class="rsSlideTitle title"><a href="recipe-page-1.html">Roast Chicken <br>With Lemon
+								Gravy</a></h2>
+
+						<div class="rsSlideTitle details">
+							<ul>
+								<li><i class="fa fa-cutlery"></i> 4 Servings</li>
+								<li><i class="fa fa-clock-o"></i> 1 Hr 20 Min</li>
+								<li><i class="fa fa-user"></i> by <a href="#">Sandra Fortin</a></li>
+							</ul>
+						</div>
+
+						<a href="recipe-page-1.html" class="rsSlideTitle button">View Recipe</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Slide #3 -->
+			<div class="rsContent">
+				<a class="rsImg" href="assets/images/sliderA_03.jpg"></a>
+				<i class="rsTmb">Avocado Melon Salad <br> With Lime Vinaigrette </i>
+
+				<!-- Slide Caption -->
+				<div class="SlideTitleContainer rsABlock">
+					<div class="CaptionAlignment">
+						<div class="rsSlideTitle tags">
+							<ul>
+								<li>Salads</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+
+						<h2 class="rsSlideTitle title"><a href="recipe-page-2.html">Avocado Melon Salad With Lime
+								Vinaigrette</a></h2>
+
+						<div class="rsSlideTitle details">
+							<ul>
+								<li><i class="fa fa-cutlery"></i> 1 Servings</li>
+								<li><i class="fa fa-clock-o"></i> 15 Min</li>
+								<li><i class="fa fa-user"></i> by <a href="#">Sandra Fortin</a></li>
+							</ul>
+						</div>
+
+						<a href="recipe-page-2.html" class="rsSlideTitle button">View Recipe</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Slide #4 -->
+			<div class="rsContent">
+				<a class="rsImg" href="assets/images/sliderA_04.jpg"></a>
+				<i class="rsTmb">Chunky Beef Stew</i>
+
+				<!-- Slide Caption -->
+				<div class="SlideTitleContainer rsABlock">
+					<div class="CaptionAlignment">
+						<div class="rsSlideTitle tags">
+							<ul>
+								<li>Beef</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+
+						<h2 class="rsSlideTitle title"><a href="recipe-page-1.html">Chunky Beef Stew</a></h2>
+
+						<div class="rsSlideTitle details">
+							<ul>
+								<li><i class="fa fa-cutlery"></i> 4 Servings</li>
+								<li><i class="fa fa-clock-o"></i> 2 Hr 30 Min</li>
+								<li><i class="fa fa-user"></i> by <a href="#">Sandra Fortin</a></li>
+							</ul>
+						</div>
+
+						<a href="recipe-page-1.html" class="rsSlideTitle button">View Recipe</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Slide #5 -->
+			<div class="rsContent">
+				<a class="rsImg" href="assets/images/sliderA_05.jpg"></a>
+				<i class="rsTmb">Farmhouse Vegetable <br> And Barley Soup</i>
+
+				<!-- Slide Caption -->
+				<div class="SlideTitleContainer rsABlock">
+					<div class="CaptionAlignment">
+						<div class="rsSlideTitle tags">
+							<ul>
+								<li>Soups</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+
+						<h2 class="rsSlideTitle title"><a href="recipe-page-1.html">Farmhouse Vegetable And Barley
+								Soup</a></h2>
+
+						<div class="rsSlideTitle details">
+							<ul>
+								<li><i class="fa fa-cutlery"></i> 4 Servings</li>
+								<li><i class="fa fa-clock-o"></i> 1 Hr 30 Min</li>
+								<li><i class="fa fa-user"></i> by <a href="#">Sandra Fortin</a></li>
+							</ul>
+						</div>
+
+						<a href="recipe-page-1.html" class="rsSlideTitle button">View Recipe</a>
+					</div>
+				</div>
+
+			</div>
+
 
 		</div>
 
-        <div class="rsContent">
 
-    <owl-carousel-o [options]="customOptions">
+    <!-- <owl-carousel-o [options]="customOptions">
 
         <ng-container *ngFor="let slide of Recipes">
           <ng-template carouselSlide [id]="slide.id">
+            
+            <img [src]="slide.image" [alt]="slide.alt" [title]="slide.title">
 
           </ng-template>
         </ng-container>
     
-      </owl-carousel-o>
-
-        </div>
+      </owl-carousel-o> -->
 
 
 <!-- Content
@@ -73,7 +200,7 @@
 
                 <!-- Thumbnail -->
                 <div class="thumbnail-holder">
-                    <a href="recipe-page-1.html">
+                    <a href="recipeDetails/{{item.id}}">
                         <img src={{item.image}} alt="" />
                         <div class="hover-cover"></div>
                         <div class="hover-icon">View Recipe</div>
@@ -84,9 +211,12 @@
                 <div class="recipe-box-content">
                     <h3 class="header-text"><a href="recipe-page-1.html" >{{item.name}}  <br> {{item.cuisine}}</a></h3>
 
+
+
+
                     <div class="rating five-stars">
-                        <div class="star-rating"></div>
-                        <div class="star-bg"></div>
+                        <!-- <div class="star-rating"></div> -->
+                        <div class="star-bg">{{item.rating}}</div>
                     </div>
 
                     <div class="recipe-meta"><i class="fa fa-clock-o"></i>{{item.prepTimeMinutes}}</div>
@@ -111,7 +241,7 @@
             <nav class="pagination-next-prev">
                 <ul>
                     <li><a href="#" class="prev"></a></li>
-                    <li><a href="#" class="next"></a></li>
+                    <li><a href="#" class="next" ></a></li>
                 </ul>
             </nav>
         </div>
